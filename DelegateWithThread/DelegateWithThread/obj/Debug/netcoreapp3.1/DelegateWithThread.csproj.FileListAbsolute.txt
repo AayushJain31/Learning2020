@@ -1,0 +1,13 @@
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\bin\Debug\netcoreapp3.1\DelegateWithThread.exe
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\bin\Debug\netcoreapp3.1\DelegateWithThread.deps.json
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\bin\Debug\netcoreapp3.1\DelegateWithThread.runtimeconfig.json
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\bin\Debug\netcoreapp3.1\DelegateWithThread.runtimeconfig.dev.json
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\bin\Debug\netcoreapp3.1\DelegateWithThread.dll
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\bin\Debug\netcoreapp3.1\DelegateWithThread.pdb
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.dll
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.pdb
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.genruntimeconfig.cache
+C:\Users\Aayush\source\repos\DelegateWithThread\DelegateWithThread\obj\Debug\netcoreapp3.1\DelegateWithThread.csprojAssemblyReference.cache
