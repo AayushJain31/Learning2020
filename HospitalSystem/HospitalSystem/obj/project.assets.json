@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "HospitalStaff/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/HospitalStaff.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HospitalStaff.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "HospitalStaff/1.0.0": {
+      "type": "project",
+      "path": "../HospitalStaff/HospitalStaff.csproj",
+      "msbuildProject": "../HospitalStaff/HospitalStaff.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "HospitalStaff >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Aayush\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
       "projectName": "HospitalSystem",
-      "projectPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
+      "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
       "packagesPath": "C:\\Users\\Aayush\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\obj\\",
+      "outputPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aayush\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -32,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
+              "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

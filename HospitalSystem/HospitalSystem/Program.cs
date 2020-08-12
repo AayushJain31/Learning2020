@@ -1,4 +1,6 @@
 ﻿using System;
+using HospitalStaff;
+using HospitalPatient;
 
 namespace HospitalSystem
 {
@@ -6,7 +8,25 @@ namespace HospitalSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("-----Start-----");
+
+            Doctor D = new Doctor();
+            D.Name = "XYZ";
+            D.Availability = 'Y';
+
+            Patient P = new Patient();
+            P.PatientName = "ABC";
+            P.WantAppointment = true;
+            P.Description = "headache";
+
+            Receptionist RP = new Receptionist();
+            RP.ApproveAppointment();
+
+            Accountant AC = new Accountant();
+            AC.CalSalary();
+
+            Console.WriteLine("-----Complete-----");
+            Console.Read();
         }
     }
 }

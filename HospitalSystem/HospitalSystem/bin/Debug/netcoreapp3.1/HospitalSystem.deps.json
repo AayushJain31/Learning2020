@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "HospitalSystem/1.0.0": {
+        "dependencies": {
+          "HospitalStaff": "1.0.0"
+        },
+        "runtime": {
+          "HospitalSystem.dll": {}
+        }
+      },
+      "HospitalStaff/1.0.0": {
+        "runtime": {
+          "HospitalStaff.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HospitalSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HospitalStaff/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

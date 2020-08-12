@@ -1,0 +1,16 @@
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalSystem.exe
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalSystem.deps.json
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalSystem.runtimeconfig.json
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalSystem.runtimeconfig.dev.json
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalSystem.dll
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalSystem.pdb
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalStaff.dll
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\bin\Debug\netcoreapp3.1\HospitalStaff.pdb
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.csprojAssemblyReference.cache
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.AssemblyInfoInputs.cache
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.AssemblyInfo.cs
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.csproj.CopyComplete
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.dll
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.pdb
+C:\Users\Aayush\Learning2020\HospitalSystem\HospitalSystem\obj\Debug\netcoreapp3.1\HospitalSystem.genruntimeconfig.cache

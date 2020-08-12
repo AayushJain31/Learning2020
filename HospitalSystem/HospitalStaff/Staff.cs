@@ -1,80 +1,102 @@
 ﻿using System;
+using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 using HospitalPatient;
+using HospitalTreatment;
+using PatientProblems;
 
 namespace HospitalStaff
 {
-    public class Doctor
+    public class Staff
     {
-        public string DoctorName { get; set; }
-        public string DoctorAddress { get; set; }
-        public char DoctorGender { get; set; }
-        public int DoctorId { get; set; }
-        public bool IsDoctorAvailable { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public char Gender { get; set; }
+        public string Field;
+        
+    }
+    public class Doctor : Staff
+    {   
+        public Nurse NR;
+        public WardBoy WB;
+        public int PatientCount = 0;
         public string Specialty { get; set; }
-        //public Hospital DoctorSalary;
-        short count = 0;
-        public void Examine(Patient P)
+        public char Availability { get; set; }
+        public void ExaminePatient(string PatientInfo)
         {
-            
-            int GetPatient = P.AllocateDoctor();
-            if ( GetPatient != 0)
+            PatientCount++;
+            NR.AssistDoctor();
+            WB.ArrangeWards();
+            Treatment T = new Treatment();
+            T.Dose = "1-0-1";
+            T.Medication = "Aspirin";
+            Problems PR = new Problems();
+            PR.CheckSymptoms();   
+        }
+    }
+    public class Nurse : Staff
+    {
+        public Doctor WorkDoctor;
+        public void AssistDoctor()
+        {
+            Console.WriteLine("Nurse : " + Name + " Is Assisting Doctor " + WorkDoctor.Name);
+        }
+    }
+    public class WardBoy : Staff
+    {
+        public void ArrangeWards()
+        {
+            Console.WriteLine("WardBoy Has Arranged The Wards.");
+        }
+    }
+    public class Receptionist : Staff
+    {
+        public Doctor AssignDoctor;
+        public Patient P;
+        bool Confirm;
+        public void ApproveAppointment()
+        {
+            Confirm = P.MakeAppointment();
+            if (Confirm == true)
             {
-                count++;
+                AssignDoctorToPatient();
+            }
+            else
+            {
+                Console.WriteLine("No Appointment Has Been Made.");
             }
         }
-        public int FindNurse(int NurseId)
+        public void AssignDoctorToPatient()
         {
-            return NurseId;
-        }
-        public string GivePrescription()
-        {
-            return "";
-        }
-    }
-    public class Nurse
-    {
-        public Doctor GetDoctor;
-        public string NurseName { get; set; }
-        public string NurseAddress { get; set; }
-        public char NurseGender { get; set; }
-        public int NurseId { get; set; }
-        public void FindDoctor()
-        {
-            int WorkDoctor = GetDoctor.FindNurse(NurseId);
-        }
-    }
-    public class WardBoy
-    {
-        public string WardBoyName { get; set; }
-        public string WardBoyAddress { get; set; }
-        public int WardBoyId { get; set; }
-        public void SetUpWard()
-        {
-            
-        }
-    }
-    public class Admin
-    {
-        public Doctor CheckDoctor;
-        public Patient PatientDetails;
-        public string AdminName { get; set; }
-        public string AdminAddress { get; set; }
-        public char AdminGender { get; set; }
-        public int AdminId { get; set; }
-        public void AdmitPatient()
-        {
-            if ( CheckDoctor.IsDoctorAvailable == true )
+            if (AssignDoctor.Availability == 'Y')
             {
-                int PatientNumber = PatientDetails.AllocateDoctor();
-                
+                P.AllocateDoctor(AssignDoctor.Name);
+            }
+            else
+            {
+                Console.WriteLine("Doctor Is Not available For Check Up Today.");
             }
         }
-        public void CollectBill()
+        public void CollectPayment()
         {
-            int BillAmount = PatientDetails.PayBill();
-            Console.WriteLine("Bill received!!!");
+            int cost = 1234;
+            P.PayBill(cost);
         }
-
     }
 
+    public class Accountant : Staff
+    {
+        public Doctor DR;
+        public void CalSalary()
+        {   
+            int salary = DR.PatientCount * 5000 + 20000;
+            Console.WriteLine("Doctor's Salary : ", salary);
+            salary = 15000;
+            Console.WriteLine("Nurse's Salary : ", salary);
+            salary = 9000;
+            Console.WriteLine("WardBoy's Salary : ", salary);
+            salary = 20000;
+            Console.WriteLine("Receptionist's Salary : ", salary);
+        }
+    }
 }
