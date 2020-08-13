@@ -1,0 +1,15 @@
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\DLLReference.exe
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\DLLReference.deps.json
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\DLLReference.runtimeconfig.json
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\DLLReference.runtimeconfig.dev.json
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\DLLReference.dll
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\DLLReference.pdb
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\bin\Debug\netcoreapp3.1\Interfaces.dll
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.csprojAssemblyReference.cache
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.csproj.CopyComplete
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.dll
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.pdb
+C:\Users\Aayush\source\repos\DLLReference\DLLReference\obj\Debug\netcoreapp3.1\DLLReference.genruntimeconfig.cache

@@ -8,12 +8,11 @@ namespace PatientProblems
 { 
     public class Problems
     {
-       public Patient PT;
         public List<Treatment> TT;
         String[] Symptoms = new String[]{"cough" , "cold" , "fever" , "headache" , "nausea" , "accident" , "eye problem" , "cancer"};
-        public void CheckSymptoms()
+        public void CheckSymptoms(Patient PT)
         {
-            if (Array.Exists(Symptoms , PT.PatientSymptoms) != null)
+            if (Array.Find(Symptoms , PT.PatientSymptoms) != null)
             {
                 TT.ProvideTreatment();
             }

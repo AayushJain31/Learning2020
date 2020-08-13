@@ -32,7 +32,7 @@ namespace HospitalStaff
             T.Dose = "1-0-1";
             T.Medication = "Aspirin";
             Problems PR = new Problems();
-            PR.CheckSymptoms();   
+            PR.CheckSymptoms(objPatients);   
         }
 
         public void MyPatients()

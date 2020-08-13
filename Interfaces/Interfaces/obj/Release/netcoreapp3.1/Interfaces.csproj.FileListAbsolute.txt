@@ -1,0 +1,8 @@
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\bin\Release\netcoreapp3.1\Interfaces.deps.json
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\bin\Release\netcoreapp3.1\Interfaces.dll
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\bin\Release\netcoreapp3.1\Interfaces.pdb
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\obj\Release\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\obj\Release\netcoreapp3.1\Interfaces.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\obj\Release\netcoreapp3.1\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\obj\Release\netcoreapp3.1\Interfaces.dll
+C:\Users\Aayush\source\repos\Interfaces\Interfaces\obj\Release\netcoreapp3.1\Interfaces.pdb
