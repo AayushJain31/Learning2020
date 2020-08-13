@@ -19,7 +19,7 @@ namespace HospitalSystem
             P.PatientName = "ABC";
             P.WantAppointment = true;
             P.Description = "headache";
-            P.AllocateDoctor(D);
+            P.AllocateDoctor();
 
             Receptionist RP = new Receptionist();
             RP.ApproveAppointment();

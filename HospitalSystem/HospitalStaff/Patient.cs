@@ -9,7 +9,7 @@ namespace HospitalPatient
     public class Patient
     {
 
-        public List<PatientProblems> PatientSymptoms = new List<PatientProblems>();
+        public List<string> PatientSymptoms = new List<string>();
         Doctor DoctorName = new Doctor();
         public string PatientName { get; set; }
         public string PatientAddress { get; set; }

@@ -49,7 +49,8 @@ namespace HospitalStaff
     public class Nurse : Staff
     {
         public WardBoy objWardBoy = new WardBoy();
-        public void AssistDoctor(Doctor WorkDoctor)
+        public Doctor WorkDoctor = new Doctor();
+        public void AssistDoctor()
         {
             Console.WriteLine("Nurse : " + Name + " Is Assisting Doctor " + WorkDoctor.Name);
         }
