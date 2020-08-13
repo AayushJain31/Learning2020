@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "214tIginjOtyxxN1igr8+lwc2mndsBi9G+3NqzKbQE3l1+6aNeLhURVaB7Xw/samu8Rk89f5wR82CHGvlql2WQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aayush\\source\\repos\\Gen0-1-2PerfMon\\Gen0-1-2PerfMon\\Gen0-1-2PerfMon.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aayush\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Aayush\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Aayush\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
