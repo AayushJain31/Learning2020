@@ -1,0 +1,9 @@
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\bin\Debug\netcoreapp3.1\StaticExample.deps.json
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\bin\Debug\netcoreapp3.1\StaticExample.dll
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\bin\Debug\netcoreapp3.1\StaticExample.pdb
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\obj\Debug\netcoreapp3.1\StaticExample.csprojAssemblyReference.cache
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\obj\Debug\netcoreapp3.1\StaticExample.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\obj\Debug\netcoreapp3.1\StaticExample.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\obj\Debug\netcoreapp3.1\StaticExample.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\obj\Debug\netcoreapp3.1\StaticExample.dll
+C:\Users\Aayush\source\repos\StaticExample\StaticExample\obj\Debug\netcoreapp3.1\StaticExample.pdb

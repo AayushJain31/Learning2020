@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "StaticConsole/1.0.0": {
+        "dependencies": {
+          "StaticExample": "1.0.0"
+        },
+        "runtime": {
+          "StaticConsole.dll": {}
+        }
+      },
+      "StaticExample/1.0.0": {
+        "runtime": {
+          "StaticExample.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StaticConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StaticExample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

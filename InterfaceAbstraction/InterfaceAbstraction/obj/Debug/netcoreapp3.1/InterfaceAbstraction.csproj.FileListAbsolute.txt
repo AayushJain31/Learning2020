@@ -1,0 +1,16 @@
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstraction.exe
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstraction.deps.json
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstraction.runtimeconfig.json
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstraction.runtimeconfig.dev.json
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstraction.dll
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstraction.pdb
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstractClass.dll
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\bin\Debug\netcoreapp3.1\InterfaceAbstractClass.pdb
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.csprojAssemblyReference.cache
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.csproj.CopyComplete
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.dll
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.pdb
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstraction\obj\Debug\netcoreapp3.1\InterfaceAbstraction.genruntimeconfig.cache

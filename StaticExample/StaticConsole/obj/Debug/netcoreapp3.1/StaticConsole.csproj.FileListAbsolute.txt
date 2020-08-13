@@ -1,0 +1,16 @@
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticConsole.exe
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticConsole.deps.json
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticConsole.runtimeconfig.json
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticConsole.runtimeconfig.dev.json
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticConsole.dll
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticConsole.pdb
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticExample.dll
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\bin\Debug\netcoreapp3.1\StaticExample.pdb
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.csprojAssemblyReference.cache
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.csproj.CopyComplete
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.dll
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.pdb
+C:\Users\Aayush\source\repos\StaticExample\StaticConsole\obj\Debug\netcoreapp3.1\StaticConsole.genruntimeconfig.cache

@@ -1,0 +1,9 @@
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\bin\Debug\netcoreapp3.1\InterfaceAbstractClass.deps.json
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\bin\Debug\netcoreapp3.1\InterfaceAbstractClass.dll
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\bin\Debug\netcoreapp3.1\InterfaceAbstractClass.pdb
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\obj\Debug\netcoreapp3.1\InterfaceAbstractClass.csprojAssemblyReference.cache
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\obj\Debug\netcoreapp3.1\InterfaceAbstractClass.AssemblyInfoInputs.cache
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\obj\Debug\netcoreapp3.1\InterfaceAbstractClass.AssemblyInfo.cs
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\obj\Debug\netcoreapp3.1\InterfaceAbstractClass.csproj.CoreCompileInputs.cache
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\obj\Debug\netcoreapp3.1\InterfaceAbstractClass.dll
+C:\Users\Aayush\source\repos\InterfaceAbstraction\InterfaceAbstractClass\obj\Debug\netcoreapp3.1\InterfaceAbstractClass.pdb
