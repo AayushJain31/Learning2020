@@ -2,6 +2,7 @@
 using HospitalStaff;
 using HospitalPatient;
 
+
 namespace HospitalSystem
 {
     class Program
@@ -18,6 +19,7 @@ namespace HospitalSystem
             P.PatientName = "ABC";
             P.WantAppointment = true;
             P.Description = "headache";
+            P.AllocateDoctor(D);
 
             Receptionist RP = new Receptionist();
             RP.ApproveAppointment();

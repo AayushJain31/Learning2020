@@ -27,19 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aayush\\.nuget\\packages\\": {}
+    "C:\\Users\\guru\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
+      "projectUniqueName": "E:\\WTW\\Learning2020-master\\Learning2020-master\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
       "projectName": "HospitalSystem",
-      "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
-      "packagesPath": "C:\\Users\\Aayush\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\obj\\",
+      "projectPath": "E:\\WTW\\Learning2020-master\\Learning2020-master\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
+      "packagesPath": "C:\\Users\\guru\\.nuget\\packages\\",
+      "outputPath": "E:\\WTW\\Learning2020-master\\Learning2020-master\\HospitalSystem\\HospitalSystem\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Aayush\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\guru\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -52,8 +56,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
-              "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj"
+            "E:\\WTW\\Learning2020-master\\Learning2020-master\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
+              "projectPath": "E:\\WTW\\Learning2020-master\\Learning2020-master\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj"
             }
           }
         }
@@ -67,21 +71,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

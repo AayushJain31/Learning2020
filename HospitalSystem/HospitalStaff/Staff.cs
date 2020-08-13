@@ -17,8 +17,9 @@ namespace HospitalStaff
     }
     public class Doctor : Staff
     {   
-        public Nurse NR;
-        public WardBoy WB;
+        public Nurse NR = new Nurse();
+        public WardBoy WB = new WardBoy();
+        public Patient objPatients = new Patient();
         public int PatientCount = 0;
         public string Specialty { get; set; }
         public char Availability { get; set; }
@@ -33,13 +34,29 @@ namespace HospitalStaff
             Problems PR = new Problems();
             PR.CheckSymptoms();   
         }
+
+        public void MyPatients()
+        {
+            ///Get a list of patients for a doctor
+            objPatients.LoadAllPatients(this);
+        }
+
+        public void DoctorSupportingNurses()
+        {
+            NR.LoadAllNurses(this);
+        }
     }
     public class Nurse : Staff
     {
-        public Doctor WorkDoctor;
-        public void AssistDoctor()
+        public WardBoy objWardBoy = new WardBoy();
+        public void AssistDoctor(Doctor WorkDoctor)
         {
             Console.WriteLine("Nurse : " + Name + " Is Assisting Doctor " + WorkDoctor.Name);
+        }
+
+        public void LoadAllNurses(Doctor WorkDoctor)
+        {
+            //get load all staff nurses also load nurses as per doctor names
         }
     }
     public class WardBoy : Staff
@@ -70,7 +87,7 @@ namespace HospitalStaff
         {
             if (AssignDoctor.Availability == 'Y')
             {
-                P.AllocateDoctor(AssignDoctor.Name);
+                P.AllocateDoctor();
             }
             else
             {
