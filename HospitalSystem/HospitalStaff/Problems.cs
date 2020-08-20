@@ -10,7 +10,8 @@ namespace PatientProblems
     {
         public List<Treatment> TT; //Multiple problems can have Multiple Treatments
         //There will be list of Symptoms in the database
-        String[] Symptoms = new String[]{"cough" , "cold" , "fever" , "headache" , "nausea" , "accident" , "eye problem" , "cancer"};
+        public List<PatientSymptoms> Symptoms = new List<PatientSymptoms>();
+        
         public void CheckSymptoms(Patient PT)
         {
             //Map Symptoms with Treatment and provide Appropriate Treatment
@@ -20,4 +21,8 @@ namespace PatientProblems
             //}
         }
     }
+    public class PatientSymptoms
+    {
+    public string problem { get; set; }
+}
 }

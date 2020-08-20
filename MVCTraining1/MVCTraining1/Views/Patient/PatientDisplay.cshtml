@@ -1,0 +1,40 @@
+﻿@model PatientLibrary.Patient
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Patient Display</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.name</td>
+                <td>@Model.number</td>
+                <td>@Model.address</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="container"><input type="button" name="Home" value="Home" /></div>
+</body>
+</html>

@@ -1,7 +1,9 @@
 ﻿using System;
 using HospitalStaff;
 using HospitalPatient;
-
+using System.Collections.Generic;
+using PatientProblems;
+using System.Linq;
 
 namespace HospitalSystem
 {
@@ -16,9 +18,18 @@ namespace HospitalSystem
             D.Availability = 'Y';
 
             Patient P = new Patient();
-            P.PatientName = "ABC";
-            P.WantAppointment = true;
-            P.Description = "headache";
+            List<Patient> PT = new List<Patient>();
+            P.Description = "headache,cold,fever";
+
+            PT.Add(new Patient()
+            {
+                PatientName = "XYZ",
+                PatientAddress = "Mumbai",
+                PhoneNumber = "123456",
+                PatientGender = 'M',
+                PatientSymptoms = P.Description.Split(",").ToList()
+            }) ;
+
             P.AllocateDoctor();
 
             Receptionist RP = new Receptionist();

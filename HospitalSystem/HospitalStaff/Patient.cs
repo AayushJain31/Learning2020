@@ -10,12 +10,14 @@ namespace HospitalPatient
     {
 
         public List<string> PatientSymptoms = new List<string>();
+        //public String PatientSymptoms { get; set; } 
+        //PatientSymptoms.Add("headache");
         Doctor DoctorName = new Doctor();
         public string PatientName { get; set; }
         public string PatientAddress { get; set; }
         public char PatientGender { get; set; }
+        public string PhoneNumber { get; set; }
         protected int PatientId { get; set; }
-        public bool WantAppointment;
         
         public string Description;
 
@@ -34,14 +36,7 @@ namespace HospitalPatient
 
         public bool MakeAppointment()
         {
-            if(WantAppointment ==  true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
         public void PayBill(int Amount)
         {

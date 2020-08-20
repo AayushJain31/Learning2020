@@ -70,7 +70,7 @@ namespace HospitalStaff
     public class Receptionist : Staff
     {
         public Doctor AssignDoctor;
-        public Patient P;
+        public Patient P = null;
         bool Confirm;
         public void ApproveAppointment()
         {
