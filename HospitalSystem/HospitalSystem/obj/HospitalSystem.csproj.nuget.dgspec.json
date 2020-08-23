@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj": {}
+    "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
+    "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj",
+        "projectUniqueName": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj",
         "projectName": "HospitalStaff",
-        "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj",
+        "projectPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj",
         "packagesPath": "C:\\Users\\Aayush\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\obj\\",
+        "outputPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalStaff\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aayush\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj": {
+    "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
         "projectName": "HospitalSystem",
-        "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
+        "projectPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\HospitalSystem.csproj",
         "packagesPath": "C:\\Users\\Aayush\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalSystem\\obj\\",
+        "outputPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aayush\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
-                "projectPath": "C:\\Users\\Aayush\\Learning2020\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj"
+              "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj": {
+                "projectPath": "C:\\Users\\Aayush\\source\\repos\\HospitalSystem\\HospitalStaff\\HospitalStaff.csproj"
               }
             }
           }
