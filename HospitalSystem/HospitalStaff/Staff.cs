@@ -14,9 +14,6 @@ namespace HospitalStaff
     }
     public class Doctor : Staff
     {   
-        //Nurse NR = new Nurse();
-        //WardBoy WB = new WardBoy();
-        Patient objPatient = new Patient();
         public List<Treatment> TT = new List<Treatment>();
 
         public int PatientCount = 0;
@@ -29,11 +26,11 @@ namespace HospitalStaff
             WB.ArrangeWards();
             //Doctor Takes A Look At Patient Symptoms And Allergies
             //LookUpProblems();
-            //LookUpAllegies();
-            ProvideTreatment(objPatient);
+            //LookUpAllergies();
+            ProvideTreatment(objPatient); 
         }
 
-        public void ProvideTreatment(Patient objPatient)
+        public void ProvideTreatment(Patient objPatient) //Doctor Checks For Appropriate Treatment and Writes The Prescription. 
         {
             //Look Up The Patient Problems and Provide Appropriate Treatment 
             Console.WriteLine("The Patient Should Take The Following Medication According To The Dose Given : ");
@@ -42,7 +39,7 @@ namespace HospitalStaff
                 Console.WriteLine("Enter The Dose And Medication For {0}", item.name);
                 TT.Add(new Treatment() { Dose = Console.ReadLine(), Medication = Console.ReadLine() });
             }
-            Receptionist RP = new Receptionist();
+            Receptionist RP = new Receptionist(); //After Receiving Treatment The Patient Goes To Receptionist
             RP.CollectPayment(objPatient);
 
         }
@@ -52,9 +49,16 @@ namespace HospitalStaff
             //Query Made By Particular Doctor To Get A List Of His Patients and Appointments
         }
 
+        public void InsertDoctor(Doctor D)
+        {
+            //We can do Insert Query To Add The Doctor to The DataBase.
+            List<Doctor> doctors = new List<Doctor>();
+            doctors.Add(D);
+        }
+
         public void DoctorSupportingNurses(Nurse NR)
         {
-            NR.LoadAllNurses(this);
+            NR.LoadAllNurses(this);//Keeps A Track Of Nurse Which Works For A Particular Doctor
         }
     }
 
@@ -92,7 +96,7 @@ public class Nurse : Staff
     public class Receptionist : Staff
     {
         bool Confirm;
-        public void ApproveAppointment(Doctor AssignDoctor , Nurse N , WardBoy W , Patient P)
+        public void ApproveAppointment(Doctor AssignDoctor , Nurse N , WardBoy W , Patient P) //Receptionist Checks For Doctor's Availabilty And Approve Patient's Appointment
         {
             Confirm = P.MakeAppointment;
             if (Confirm == true)
@@ -104,13 +108,14 @@ public class Nurse : Staff
                 Console.WriteLine("No Appointment Has Been Made.");
             }
         }
-        public void AssignDoctorToPatient(Doctor AssignDoctor , Nurse N , WardBoy W , Patient P)
+        public void AssignDoctorToPatient(Doctor AssignDoctor , Nurse N , WardBoy W , Patient P) //Doctor Is Assigned To Doctor As Per Speciality
         {
+            //Make a database call and check for Doctor's Speciality related to Patient's problem
             if (AssignDoctor.Availability == 'Y')
             {
                 AssignDoctor.PatientCount++;
                 //Make A DataBase Entry For The Patient Against Doctor 
-                Console.WriteLine("The Patient : {0} Has Been Allocated Doctor {1}", P.PatientName,AssignDoctor.Name);
+                Console.WriteLine("The Patient : {0} Has Been Allocated Doctor : Dr . {1}.", P.PatientName,AssignDoctor.Name);
                 AssignDoctor.ExaminePatient(N,W,P);
             }
             else
@@ -120,20 +125,19 @@ public class Nurse : Staff
         }
         public void CollectPayment(Patient P)
         {
-            int cost = 1234;
+            int cost = 1234; //Cost For The Treatment
             P.PayBill(cost);
         }
     }
 
     public class Accountant : Staff
     {
-        public Doctor DR;
-        public void CalSalary()
+        public void CalSalary(Doctor DR)
         {   
-            int salary = DR.PatientCount * 5000 + 20000;
+            int salary = DR.PatientCount * 5000 + 20000; //Doctor's Salary is Calculated using his patient count
             Console.WriteLine("Doctor's Salary : ", salary);
             salary = 15000;
-            Console.WriteLine("Nurse's Salary : ", salary);
+            Console.WriteLine("Nurse's Salary : ", salary); //Other Staff has fixed salary.
             salary = 9000;
             Console.WriteLine("WardBoy's Salary : ", salary);
             salary = 20000;

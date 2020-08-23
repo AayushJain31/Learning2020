@@ -27,13 +27,16 @@ namespace HospitalSystem
 
             Nurse N = new Nurse();
             N.Name = "ABC";
+            N.Address = "ChurchGate";
 
 
             WardBoy W = new WardBoy();
             W.Name = "PQR";
+            W.Address = "Dadar";
 
             Doctor D = new Doctor();
             D.Name = "XYZ";
+            D.Address = "Mumbai";
             D.Availability = 'Y';
             D.Specialty = "Physician MD";
 
@@ -41,7 +44,7 @@ namespace HospitalSystem
             RP.ApproveAppointment(D , N , W , P);
 
             //Accountant AC = new Accountant();
-            //AC.CalSalary();
+            //AC.CalSalary(D);
 
             Console.WriteLine("-----Complete-----");
             Console.Read();

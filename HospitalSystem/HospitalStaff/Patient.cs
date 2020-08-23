@@ -17,7 +17,7 @@ namespace HospitalPatient
         {
             get { return _Name; }
             set { 
-                if(value.Equals(""))
+                if(value.Equals("")) //Patient Name is Compulsory
                 {
                     throw new Exception("Patient Name cannot ne NULL/EMPTY!!!");
                 }
@@ -34,7 +34,7 @@ namespace HospitalPatient
         {
             get { return _Number; }
             set {
-                if (value.Length == 0)
+                if (value.Length == 0) //Patient Number Is Compulsory
                 {
                     throw new Exception("Patient Number cannot ne NULL/EMPTY!!!");
                 }
@@ -48,6 +48,7 @@ namespace HospitalPatient
         public string PatientAddress { get; set; }
 
         public bool visit;
+        
         public List<DateTime> visitLog = new List<DateTime>(); //Stores Every Visit Time Log For The Patient
 
         public bool MakeAppointment = true;
@@ -56,34 +57,37 @@ namespace HospitalPatient
             if (visit == true)
             {
                 visitLog.Add(DateTime.Now);
+                Console.WriteLine("The Patient {0} Has Visited The Hospital At The Time : {1}",PatientName , DateTime.Now );
             }
         }
 
-        public void InsertPatient()
+        public void InsertPatient(Patient P)
         {
             //We can do Insert Query To Add The Patient Details to The DataBase.
+            List<Patient> patients = new List<Patient>();
+            patients.Add(P);
         }
 
         public void PayBill(int Amount) //Pascal Case
         {
-            Console.WriteLine("The Patient : " + PatientName + "Has Made The Payment Amount : " + Amount);
+            Console.WriteLine("The Patient : " + PatientName + " Has Made The Payment Amount : " + Amount);
         }
     }
 
-    public interface IPatientProblems
+    public interface IPatientProblems //Common Interface For Allergies And Problems 
     {
         public string name { get; set; } //Camel Case
         public string description { get; set; } //Camel Case
         public string duration { get; set; } //Camel Case
     }
-    public class Allergies : IPatientProblems
+    public class Allergies : IPatientProblems //Class Implements Interface
     {
         public string name { get; set; } //Camel Case
         public string description { get; set; } //Camel Case
         public string duration { get; set; } //Camel Case
     }
 
-    public class PatientSymptoms : IPatientProblems
+    public class PatientSymptoms : IPatientProblems //Class Implements Interface
     {
         public string name { get; set; } //Camel Case
         public string description { get; set; } //Camel Case
