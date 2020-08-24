@@ -112,3 +112,6 @@ C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\obj\Debug\netcoreapp3.1\R
 C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\bin\Debug\netcoreapp3.1\PatientLibrary.dll
 C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\bin\Debug\netcoreapp3.1\PatientLibrary.pdb
 C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\obj\Debug\netcoreapp3.1\Razor\Views\Patient\PatientDisplay.cshtml.g.cs
+C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\obj\Debug\netcoreapp3.1\Razor\Views\Patient\PatientAdmit.cshtml.g.cs
+C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\obj\Debug\netcoreapp3.1\Razor\Views\Patient\PatientAppointment.cshtml.g.cs
+C:\Users\Aayush\source\repos\MVCTraining1\MVCTraining1\obj\Debug\netcoreapp3.1\Razor\Views\Patient\PatientTreatment.cshtml.g.cs

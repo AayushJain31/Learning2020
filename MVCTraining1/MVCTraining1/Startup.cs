@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Http;
+using PatientLibrary;
+using Microsoft.AspNetCore.Routing;
 
 namespace MVCTraining1
 {
@@ -23,14 +26,46 @@ namespace MVCTraining1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(30);
+            });
+            //services.AddSession(options =>
+            //{
+            //    options.IdleTimeout = TimeSpan.FromSeconds(60);
+            //    options.Cookie.HttpOnly = true;
+            //    options.Cookie.IsEssential = true;
+            //});
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //services.AddScoped<IPatient, Patient>();
+            services.AddScoped<IPatient>((ptx) =>
+            {
+                IHttpContextAccessor conn = ptx.GetService<IHttpContextAccessor>(); //to get current data of form
+                //string ctr = conn.HttpContext.GetRouteValue("PatientController").ToString();
+                string _name = conn.HttpContext.Request.Form["txtname"].ToString();
+                //string address = conn.HttpContext.Request.Form["address"];
+                if(_name == "")
+                {
+                    return new Patient();
+                }
+                else
+                {
+                    return new PatientCheckAddress();
+                }
+                
+            });
+            
             services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseMiddleware<SecurityCheck>();
-            app.UseMiddleware<LogInCheck>();
+            //app.UseMiddleware<SecurityCheck>();
+            //app.UseMiddleware<LogInCheck>();
+            ///app.UseMiddleware<CookieMiddleware>();
+            //var SessionId = Session.SessionId;
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -47,7 +82,13 @@ namespace MVCTraining1
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "PatientAdmit",
+            //        pattern: "{controller=Patient}/{action=Admit}");
+            //});
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

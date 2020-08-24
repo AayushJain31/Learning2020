@@ -1,0 +1,78 @@
+﻿@model PatientAdmitViewModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>PatientAppointment</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="Index.cshtml">ASP.NET Core Hospital System</a>.</p>
+    </div>
+    <div class="container">
+        <p>Your Details...</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.allPatients)
+            {
+                <tbody>
+                    <tr>
+                        <td>@item.name</td>
+                        <td>@item.number</td>
+                        <td>@item.address</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+
+    <div class="container">
+        <p>Problems Mapped ( One To Many ) To Treatments</p>
+        <ul>
+            @foreach (var item in Model.allPatients)
+            {
+                @foreach (var prob in item.problems)
+                {
+                    <li>@prob.problem</li>
+                    
+                        @foreach (var treat in prob.treatments)
+                        {
+                            <li>
+                                <p>Treatment Name : @treat.treatmentName</p>
+                                <p>Treatment Dose : @treat.dose</p>
+                            </li>
+                        }
+                }
+            }
+        </ul>
+    </div>
+
+    <div class="text-center">
+        <form class="form-inline" method="post" action="">
+            <button type="submit" class="btn btn-default" value="" name="submit">Make An Appointment</button>
+        </form>
+    </div>
+
+</body>
+</html>

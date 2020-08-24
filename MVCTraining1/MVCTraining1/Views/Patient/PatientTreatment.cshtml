@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Patient Display</title>
+    <title>PatientTreatment</title>
     <style>
         table, th, td {
             border: 1px solid black;
@@ -32,6 +32,7 @@
                     <th>Name</th>
                     <th>Number</th>
                     <th>Address</th>
+                    <th>Problems</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,25 +40,23 @@
                     <td>@Model.currentPatient.name</td>
                     <td>@Model.currentPatient.number</td>
                     <td>@Model.currentPatient.address</td>
+                    <td>
+                        <table class="table table-striped">
+                            @foreach (var prob in Model.currentPatient.problems)
+                            {
+                                <tr>
+                                    <td>@prob.problem</td>
+                                </tr>
+
+                            }
+                        </table>
+                    </td>
                 </tr>
             </tbody>
-
         </table>
     </div>
 
     <div class="container">
-        <p>Enter Your Problems Here</p>
-        <form class="form-inline" method="post" action="Problem">
-            <div class="form-group">
-                <label for="name">Problems:</label>
-                <input type="text" class="form-control" id="problem" placeholder="Enter Problem" name="txtproblem" value="" />
-            </div>
-            <button type="submit" class="btn btn-default" value="" name="add">Add Problem</button>
-        </form>
-    </div>
-
-    <div class="container">
-        <br />
         <p>Enter The Treatment For Concerning Problems Here</p>
         <form class="form-inline" method="post" action="AddTreatment">
             <div class="form-group">
@@ -74,10 +73,9 @@
 
     <div class="container">
         <form class="form-inline" method="post" action="Appointment">
-            <button type="submit" class="btn btn-default" value="" name="submit">Submit</button>
+            <button type="submit" class="btn btn-default" value="" name="submit">Finish</button>
         </form>
     </div>
-
 
 </body>
 </html>
