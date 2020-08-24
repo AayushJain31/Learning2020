@@ -16,7 +16,7 @@ namespace HospitalStaff
     {   
         public List<Treatment> TT = new List<Treatment>();
 
-        public int PatientCount = 0;
+        internal int PatientCount = 0;
         public string Specialty { get; set; }
         public char Availability { get; set; }
 

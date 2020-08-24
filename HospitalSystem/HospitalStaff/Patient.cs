@@ -44,10 +44,12 @@ namespace HospitalPatient
                 }
             }
         }
-
+        
         public string PatientAddress { get; set; }
 
         public bool visit;
+
+        public string nature;
         
         public List<DateTime> visitLog = new List<DateTime>(); //Stores Every Visit Time Log For The Patient
 
