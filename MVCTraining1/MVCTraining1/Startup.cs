@@ -11,6 +11,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using PatientLibrary;
 using Microsoft.AspNetCore.Routing;
+using HospitalRepository;
+using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 namespace MVCTraining1
 {
@@ -26,17 +29,20 @@ namespace MVCTraining1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<HospitalDbContext>(options =>
+                {
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("HospitalRepository"));
+                }
+            );
+            services.AddAutoMapper(typeof(Startup));
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(30);
+                options.IdleTimeout = TimeSpan.FromSeconds(60);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true; 
             });
-            //services.AddSession(options =>
-            //{
-            //    options.IdleTimeout = TimeSpan.FromSeconds(60);
-            //    options.Cookie.HttpOnly = true;
-            //    options.Cookie.IsEssential = true;
-            //});
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddScoped<IPatient, Patient>();
             services.AddScoped<IPatient>((ptx) =>
@@ -66,6 +72,8 @@ namespace MVCTraining1
             //app.UseMiddleware<LogInCheck>();
             ///app.UseMiddleware<CookieMiddleware>();
             //var SessionId = Session.SessionId;
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -83,12 +91,12 @@ namespace MVCTraining1
 
             app.UseAuthorization();
             app.UseSession();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "PatientAdmit",
-            //        pattern: "{controller=Patient}/{action=Admit}");
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "PatientAdmit",
+                    pattern: "{controller=Patient}/{action=Admit}");
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

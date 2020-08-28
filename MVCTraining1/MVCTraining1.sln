@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTraining1", "MVCTraining1\MVCTraining1.csproj", "{66D13BED-2BCD-400C-82BE-B48B879F7064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCTraining1", "MVCTraining1\MVCTraining1.csproj", "{66D13BED-2BCD-400C-82BE-B48B879F7064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientLibrary", "PatientLibrary\PatientLibrary.csproj", "{83E7D72D-C257-4D58-BDA4-63E734286912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientLibrary", "PatientLibrary\PatientLibrary.csproj", "{83E7D72D-C257-4D58-BDA4-63E734286912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalRepository", "HospitalRepository\HospitalRepository.csproj", "{5025AD48-D77C-4F68-9FE0-89E02FF5ED33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{83E7D72D-C257-4D58-BDA4-63E734286912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83E7D72D-C257-4D58-BDA4-63E734286912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83E7D72D-C257-4D58-BDA4-63E734286912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5025AD48-D77C-4F68-9FE0-89E02FF5ED33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5025AD48-D77C-4F68-9FE0-89E02FF5ED33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5025AD48-D77C-4F68-9FE0-89E02FF5ED33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5025AD48-D77C-4F68-9FE0-89E02FF5ED33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

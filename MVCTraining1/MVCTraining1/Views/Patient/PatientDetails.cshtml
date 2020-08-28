@@ -1,0 +1,95 @@
+﻿@model PatientAdmitViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>PatientDetails</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="Index.cshtml">ASP.NET Core Hospital System</a>.</p>
+        <div class="float-sm-right">
+            <p>Search Details...</p>
+            <form class="form-inline" method="post" action="Search">
+                <div class="form-group">
+                    <label for="name">Search By Name Of The Patient:</label>
+                    <input type="text" class="form-control" id="search" placeholder="Enter Name" name="txtsearch" value="" />
+                </div>
+                <button type="submit" class="btn btn-default" value="" name="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>Your Details...</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.allPatients)
+            {
+                <tbody>
+                    <tr>
+                        <td>@item.name</td>
+                        <td>@item.number</td>
+                        <td>@item.address</td>
+                        <td>@item.email</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+
+    <div class="container">
+        <p>Problems Mapped ( One To Many ) To Treatments</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Problem Name</th>
+                    <th>Treatment Provided</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.allPatients)
+            {
+                @foreach (var prob in item.problems)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@prob.problem</td>
+                            <td>
+                                @foreach (var treat in prob.treatments)
+                                {
+                                    <p>Treatment Name : @treat.treatmentName</p>
+                                    <p>Treatment Dose : @treat.dose</p>
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿@model PatientAdmitViewModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>PatientSearch</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="Index.cshtml">ASP.NET Core Hospital System</a>.</p>
+    </div>
+    
+    <div class="container">
+        <p>Search Details...</p>
+        <div class="container">
+            <form class="form-inline" method="post" action="Search">
+                <div class="form-group">
+                    <label for="name">Search By Name Of The Patient:</label>
+                    <input type="text" class="form-control" id="search" placeholder="Enter Name" name="txtsearch" value="" />
+                </div>
+                <button type="submit" class="btn btn-default" value="" name="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <p>Search Results : </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>PatientId</th>
+                    <th>PatientName</th>
+                    <th>PatientNumber</th>
+                    <th>PatientAddress</th>
+                    <th>PatientEmail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.query.Id</td>
+                    <td>@Model.query.name</td>
+                    <td>@Model.query.number</td>
+                    <td>@Model.query.address</td>
+                    <td>@Model.query.email</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <b><i>@Model.query</i></b>
+    </div>
+</body>
+</html>

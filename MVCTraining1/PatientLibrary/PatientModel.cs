@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PatientLibrary
 {   
@@ -10,12 +11,28 @@ namespace PatientLibrary
         public string number { get; set; }
         List<PatientProblems> problems { get; set; }
     }
-    public class Patient : IPatient
+    public class PatientDTO
     {
-        public string name { get; set; }
-        public string address { get; set; }
-        public string number { get; set; }
-        public List<PatientProblems> problems { get; set; }
+        public virtual string name { get; set; }
+        public virtual string address { get; set; }
+        public virtual string number { get; set; }
+        public virtual string email { get; set; }
+        public virtual List<PatientProblems> problems { get; set; }
+    }
+
+    public class Patient : PatientDTO , IPatient
+    {
+        public int Id { get; set; }
+        [Required(ErrorMessage = "The Name Is Required!")]
+        public override string name { get; set; }
+        public override string address { get; set; }
+        [Required(ErrorMessage = "The Phone Number Is Required!")]
+        public override string number { get; set; }
+        //[RegularExpression(@"^[a-z]{3,8}.[a-z]{3-8}@[a-z]{3-10}.[a-z]{2,3}$")]
+        [Required(ErrorMessage = "The Email Address Is Required!")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        public override string email { get; set; }
+        public override List<PatientProblems> problems { get; set; }
         public string guid { get; set; }
 
         public Patient()
@@ -51,19 +68,18 @@ namespace PatientLibrary
     }
     public class PatientProblems
     {
+        public int Id { get; set; }
         public string problem { get; set; }
         public List<Treatment> treatments { get; set; }
-
         public PatientProblems()
         {
             this.treatments = new List<Treatment>();
         }
     }
-
     public class Treatment
     {
+        public int Id { get; set; }
         public string treatmentName { get; set; }
-
         public string dose { get; set; }
     }
 }

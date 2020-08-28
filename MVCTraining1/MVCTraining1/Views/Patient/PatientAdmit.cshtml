@@ -2,7 +2,8 @@
 @{
     Layout = null;
 }
-
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/ClientSide/PatientModel.js"></script>
 <!DOCTYPE html>
 
 <html>
@@ -14,29 +15,256 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <title>Patient Home Page</title>
+    <style>
+        th, td, p, input {
+            font: 14px Verdana;
+        }
+
+        table, th, td {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        //function Pet(name, species) {
+        //    this.name = name;
+        //    this.species = species;
+        //}
+        //function view() {
+        //    return this.name + " is a " + this.species + "!";
+        //}
+        //Pet.prototype.view = view;
+        //var pet1 = new Pet('Jerry', 'Mouse');
+        //console.log(pet1.view());
+        var CurrPatient = new Patient();
+        var ProblemObj = new PatientProblems();
+        function AddPatient() {
+            CurrPatient.name = $("#txtname").val();
+            CurrPatient.number = $("#txtnumber").val();
+            CurrPatient.address = $("#txtaddress").val();
+            CurrPatient.email = $("#txtemail").val();
+        }
+        function AddProblems() {
+            ProblemObj.problem = $("#txtproblem").val();
+        }
+        function AddTreatment() {
+            var TreatObj = new Treatment();
+            TreatObj.treatmentName = $("#txttreatmentname").val();
+            TreatObj.dose = $("#txttreatmentdose").val();
+            ProblemObj.treatments.push(TreatObj);
+            $("#txttreatmentname").val("");
+            $("#txttreatmentdose").val("");
+        }
+        function PushProblems() {
+            CurrPatient.problems.push(ProblemObj);
+            ProblemObj = new PatientProblems();
+            $("#txtproblem").val("");
+        }
+        function Display() {
+            list = '';
+            //list += '< table class = "table table-striped" >';
+            //$.each(CurrPatient, function (item) {
+            //    list += '<tr><td>' + "Patient Name : " + item.name + '</td></tr>';
+            //    list += '<tr><td>' + "Patient Number : " + item.number + '</td></tr>';
+            //    list += '<tr><td>' + "Patient Address : " + item.address + '</td></tr>';
+            //    list += '<tr><td>' + "Patient Email : " + item.email + '</td></tr>';
+            //}); 
+            //list += '</table><br/>';
+            $.each(CurrPatient.problems, function (key, value) {
+                list += '<table class = "table table - striped">';
+                list += '<tr><td>' + "Problem Description : " + value.problem + '</td></tr>';
+                list += '<table class = "table table-striped">'
+                list += '<tr><th>' + "Treatments" + '</th></tr>';
+                $.each(value.treatments, function (key1, value1) {
+                    list += '<tr><td>' + "Treatment Name : " + value1.treatmentName + '</td></tr>';
+                    list += '<tr><td>' + "Treatment Duration : " + value1.dose + '</td></tr>';
+                });
+                list += '</table>';
+                list += '</table>';
+            });
+            $('#List').append(list);
+        }
+        function Submit() {
+            var Check = CurrPatient;
+            $.ajax({
+                url: "/Api/PatientAPI/",
+                type: "POST",
+                data: JSON.stringify(Check),
+                contentType: "application/json ; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //alert(response);
+                    $('#ErrorTable').remove();
+                    Display();
+                    function CreateTableFromJSON(response) {
+                        var rows = '';
+                        var headers = '';
+                        headers += '<tr>';
+                        headers += '<th>' + "Patient Name" + '</th>';
+                        headers += '<th>' + "Patient Number" + '</th>';
+                        headers += '<th>' + "Patient Address" + '</th>';
+                        headers += '<th>' + "Patient Email" + '</th>';
+                        headers += '</tr>';
+                        $('#PatientTable').append(headers);
+                        $.each(response, function (key, value) {
+                            //Create Rows Fron Json Data
+                            rows += '<tr>';
+                            rows += '<td>' + value.name + '</td>';
+
+                            rows += '<td>' + value.number + '</td>';
+
+                            rows += '<td>' + value.address + '</td>';
+
+                            rows += '<td>' + value.email + '</td>';
+
+                            rows += '</tr>';
+                        });
+
+                        //INSERTING ROWS INTO TABLE
+                        $('#PatientTable').append(rows);
+                    }
+                    CreateTableFromJSON(data);
+                    CurrPatient = new Patient();
+
+                    $("#txtname").val("");
+                    $("#txtnumber").val("");
+                    $("#txtaddress").val("");
+                    $("#txtemail").val("");
+                },
+                failure: function (response) {
+                    console.log(response.responseText);
+                },
+                error: function (response) {
+                    $('#List').remove();
+                    function CreateErrorTable() {
+                        var data = response.responseJSON; //Get The ErrorList
+                        var rows = '';
+                        var headers = '';
+                        headers += '<tr>';
+                        headers += '<th>' + "Errors" + '</th>';
+                        headers += '</tr>';
+                        $('#ErrorTable').append(headers);
+                        $.each(data, function (key, value) {
+                            rows += '<tr style="color:red">';
+                            rows += '<td>' + value.errorMessage + '</td>'; //Display The Validation Results
+                            rows += '</tr>';
+                        });
+                        $('#ErrorTable').append(rows);
+                    }
+                    CreateErrorTable();
+                }
+            });
+        }
+
+
+
+
+    </script>
 </head>
 <body>
     <div class="text-center">
         <h1 class="display-4">Welcome</h1>
         <p>Learn about <a href="Index.cshtml">ASP.NET Core Hospital System</a>.</p>
     </div>
+
     <div class="container">
         <p>Enter Your Details Here</p>
-        <form class="form-inline" method="post" action="MySubmit">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="txtname" value="" />
-            </div>
-            <div class="form-group">
-                <label for="number">Number:</label>
-                <input type="text" class="form-control" id="number" placeholder="Enter Phone Number" name="txtnumber" value="" />
-            </div>
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <input type="text" class="form-control" id="address" placeholder="Enter Address" name="txtaddress" value="" />
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        <div class="col-sm-6">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="txtname" placeholder="Enter Name" onchange="AddPatient()" value="" />
+        </div>
+        <div class="col-sm-6">
+            <label for="number">Number:</label>
+            <input type="text" class="form-control" id="txtnumber" placeholder="Enter Phone Number" onchange="AddPatient()" value="" />
+        </div>
+        <div class="col-sm-6">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="txtaddress" placeholder="Enter Address" onchange="AddPatient()" value="" />
+        </div>
+        <div class="col-sm-6">
+            <label for="address">Email:</label>
+            <input type="text" class="form-control" id="txtemail" placeholder="Enter Email" onchange="AddPatient()" value="" />
+        </div>
     </div>
+    <br />
+    <div class="container">
+        <p>Enter Your Problems Here</p>
+        <div class="col-sm-6">
+            <label for="name">Problems:</label>
+            <input type="text" class="form-control" id="txtproblem" placeholder="Enter Problem" value="" />
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <p>Enter The Treatment For Concerning Problem Here</p>
+        <div class="col-sm-6">
+            <label for="name">Treatment Name:</label>
+            <input type="text" class="form-control" id="txttreatmentname" placeholder="Enter the treatment name" value="" />
+        </div>
+        <div class="col-sm-6">
+            <label for="name">Treatment Duration (Dose):</label>
+            <input type="text" class="form-control" id="txttreatmentdose" placeholder="Enter the treatment duration" value="" />
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default" value="" name="add" onclick="AddProblems()">Add Problem</button>
+        </div>
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default" value="" name="submit" onclick="AddTreatment()">Add Treatments</button>
+        </div>
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default" value="" name="submit" onclick="PushProblems()">Add Another Problem</button>
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <button type="button" class="btn btn-default" value="" name="submit" onclick="Submit()">Submit Details</button>
+    </div>
+    <br />
+
+    <div class="container" id="List">
+
+    </div>
+
+    <div class="container">
+        <table class="table table-striped" id="ErrorTable">
+            <thead>
+
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped" id="PatientTable">
+            <thead>
+
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
+
+
+@*$.each(data, function (p, pats) {
+                        var row = $("
+<tr />");
+                        $.each(pats, function (key, value) {
+                            row.append($('
+<td />').html(value));
+                        });
+                        $("#PatientTable").append(row);
+                    });*@

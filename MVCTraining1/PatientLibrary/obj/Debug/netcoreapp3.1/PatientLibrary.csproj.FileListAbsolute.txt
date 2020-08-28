@@ -7,3 +7,12 @@ C:\Users\Aayush\source\repos\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1
 C:\Users\Aayush\source\repos\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Aayush\source\repos\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.dll
 C:\Users\Aayush\source\repos\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.pdb
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\bin\Debug\netcoreapp3.1\PatientLibrary.deps.json
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\bin\Debug\netcoreapp3.1\PatientLibrary.dll
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\bin\Debug\netcoreapp3.1\PatientLibrary.pdb
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.csprojAssemblyReference.cache
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.AssemblyInfoInputs.cache
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.AssemblyInfo.cs
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.csproj.CoreCompileInputs.cache
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.dll
+C:\Users\TrainAdmin\Downloads\MVCTraining1\PatientLibrary\obj\Debug\netcoreapp3.1\PatientLibrary.pdb
