@@ -1,4 +1,5 @@
 ﻿using HospitalStaff;
+using HospitalTreatment;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,15 +17,23 @@ namespace HospitalPatient
         public string PatientName
         {
             get { return _Name; }
-            set { 
-                if(value.Equals("")) //Patient Name is Compulsory
+            set {
+                try
                 {
-                    throw new Exception("Patient Name cannot ne NULL/EMPTY!!!");
+                    if (value.Equals("")) //Patient Name is Compulsory
+                    {
+                        throw new Exception();
+                    }
+                    else
+                    {
+                        _Name = value;
+                    }
                 }
-                else
+                catch(Exception)
                 {
-                    _Name = value;
-                } 
+                    Console.WriteLine("Patient Name cannot ne NULL / EMPTY!!! Close The Application And Enter Again");
+                }
+                
             }
         }
 
@@ -74,6 +83,7 @@ namespace HospitalPatient
         {
             Console.WriteLine("The Patient : " + PatientName + " Has Made The Payment Amount : " + Amount);
         }
+
     }
 
     public interface IPatientProblems //Common Interface For Allergies And Problems 
@@ -94,6 +104,7 @@ namespace HospitalPatient
         public string name { get; set; } //Camel Case
         public string description { get; set; } //Camel Case
         public string duration { get; set; } //Camel Case
+        public List<Treatment> treatments { get; set; }
     }
 }
 

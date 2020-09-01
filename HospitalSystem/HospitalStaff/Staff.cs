@@ -32,12 +32,27 @@ namespace HospitalStaff
 
         public void ProvideTreatment(Patient objPatient) //Doctor Checks For Appropriate Treatment and Writes The Prescription. 
         {
-            //Look Up The Patient Problems and Provide Appropriate Treatment 
+            //Look Up The Patient Problems and Provide Appropriate Treatment
+            string add = "";
+            Console.WriteLine("Patient {0} Problems : ",objPatient.PatientName);
+            foreach (var item in objPatient.patientSymptoms)
+            {
+                Console.WriteLine("Patient Problem :" + item.name);
+                Console.WriteLine("Problem Description :" + item.description);
+                Console.WriteLine("Problem Duration:" + item.duration);
+            }
+
             Console.WriteLine("The Patient Should Take The Following Medication According To The Dose Given : ");
             foreach (var item in objPatient.patientSymptoms)
-            {  
-                Console.WriteLine("Enter The Dose And Medication For {0}", item.name);
-                TT.Add(new Treatment() { Dose = Console.ReadLine(), Medication = Console.ReadLine() });
+            {
+                add = "Yes";
+                while(add.Equals("Yes"))
+                {
+                    Console.WriteLine("Enter The Dose And Medication For {0}", item.name);
+                    TT.Add(new Treatment() { Dose = Console.ReadLine(), Medication = Console.ReadLine() });
+                    Console.WriteLine("Do You Want To Add Another Treatment For {0} (Yes/No)", item.name);
+                    add = Console.ReadLine();
+                }
             }
             Receptionist RP = new Receptionist(); //After Receiving Treatment The Patient Goes To Receptionist
             RP.CollectPayment(objPatient);

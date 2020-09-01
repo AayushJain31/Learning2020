@@ -25,12 +25,14 @@ namespace HospitalSystem
             {
                 Console.WriteLine("Patient Name : ");
                 P.PatientName = Console.ReadLine();
+                if (P.PatientName == "")
+                {
+                    return;
+                }
                 Console.WriteLine("Patient Number : ");
                 P.PatientNumber = Console.ReadLine();
-                //P.PatientName = "XYZ"; //set the property
-                //string Name = P.PatientName;
-                P.PatientAddress = "Mumbai";
-                P.PatientNumber = "123456";
+                Console.WriteLine("Patient Address : ");
+                P.PatientAddress = Console.ReadLine();
                 P.patientAllergies.Add(new Allergies() { name = "Pollen Allergy", description = "Sneeze,Itchy Eyes", duration = "5 years" });
                 P.patientSymptoms.Add(new PatientSymptoms() { name = "Viral fever", description = "Head Ache.Body Pain", duration = "2 Days" });
                 P.patientSymptoms.Add(new PatientSymptoms() { name = "Cold", description = "Runny Nose,Sneezing", duration = "3 Days" });
