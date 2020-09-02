@@ -1,0 +1,17 @@
+{
+  "name": "clientangular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Hello.js",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "knockout": "^3.5.1",
+    "typescript": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
